@@ -1,0 +1,35 @@
+{
+    "name": "canzell/crapi-sns-client",
+    "description": "Laravel package for broadcasting SNS notifications.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Canzell\\Aws\\Sns\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matt Kratos",
+            "email": "matt@canzell.com"
+        },
+        {
+            "name": "Isaiah Smith",
+            "email": "isaiah@canzell.com"
+        }
+    ],
+    "require": {
+        "aws/aws-sdk-php": "^3.185",
+        "aws/aws-php-sns-message-validator": "^1.6"
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "Canzell\\Aws\\Sns\\Providers\\SnsProvider"
+          ],
+          "aliases": {
+            "SNS": "Canzell\\Aws\\Sns\\Facades\\SNS",
+            "Canzell\\Facades\\SNS": "Canzell\\Aws\\Sns\\Facades\\SNS"
+          }
+        }
+      }
+}
