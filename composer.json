@@ -1,0 +1,27 @@
+{
+    "name": "canzell/crapi-auth",
+    "description": "Authentication and Authorization for CRAPI requests.",
+    "type": "project",
+    "require": {
+        "canzell/crapi-client": "*",
+        "firebase/php-jwt": "^5.2"
+    },
+    "authors": [
+        {
+            "name": "Isaiah Smith",
+            "email": "7606654-isaiah.smith@users.noreply.gitlab.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Canzell\\": "./src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Canzell\\Providers\\CRAPIAuthServiceProvider"
+            ]
+        }
+    }
+}
